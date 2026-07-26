@@ -15,13 +15,22 @@ La única forma de verlos es detectarlos **en el servidor**, antes de que se gen
 ## Pruébalo en 30 segundos (sin instalar nada en tu web)
 
 ```sh
+npx @ai-crawler-tracker/dashboard --demo
+```
+
+Abre `http://localhost:4321` y verás el panel con datos de demostración: visitas por agente, tendencia diaria, páginas más consultadas y últimas visitas.
+
+<details>
+<summary>¿Prefieres correrlo desde el código fuente?</summary>
+
+```sh
 git clone https://github.com/AldaMartdev/ai-crawler-tracker
 cd ai-crawler-tracker
 pnpm install && pnpm build
 node packages/dashboard/dist/cli.js --demo
 ```
 
-Abre `http://localhost:4321` y verás el panel con datos de demostración: visitas por agente, tendencia diaria, páginas más consultadas y últimas visitas.
+</details>
 
 ## Cómo funciona (en 3 pasos)
 
