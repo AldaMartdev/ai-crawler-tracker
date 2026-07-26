@@ -1,0 +1,51 @@
+{
+  "name": "@ai-crawler-tracker/edge",
+  "version": "0.1.0",
+  "description": "AI crawler tracking for Cloudflare Workers, Vercel Edge and Netlify Edge Functions",
+  "license": "Apache-2.0",
+  "author": "Bryan Martinez (https://github.com/AldaMartdev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldaMartdev/ai-crawler-tracker.git",
+    "directory": "packages/edge"
+  },
+  "homepage": "https://github.com/AldaMartdev/ai-crawler-tracker#readme",
+  "bugs": "https://github.com/AldaMartdev/ai-crawler-tracker/issues",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-crawler",
+    "gptbot",
+    "claudebot",
+    "cloudflare-workers",
+    "vercel-edge",
+    "netlify-edge",
+    "bot-analytics"
+  ],
+  "dependencies": {
+    "@ai-crawler-tracker/core": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

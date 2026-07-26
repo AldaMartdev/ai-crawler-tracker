@@ -1,0 +1,53 @@
+{
+  "name": "@ai-crawler-tracker/sqlite",
+  "version": "0.1.0",
+  "description": "Local SQLite storage for AI crawler events using node:sqlite — no native dependencies, no external SaaS",
+  "license": "Apache-2.0",
+  "author": "Bryan Martinez (https://github.com/AldaMartdev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldaMartdev/ai-crawler-tracker.git",
+    "directory": "packages/sqlite"
+  },
+  "homepage": "https://github.com/AldaMartdev/ai-crawler-tracker#readme",
+  "bugs": "https://github.com/AldaMartdev/ai-crawler-tracker/issues",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-crawler",
+    "sqlite",
+    "bot-analytics",
+    "self-hosted",
+    "crawler-detection"
+  ],
+  "dependencies": {
+    "@ai-crawler-tracker/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
